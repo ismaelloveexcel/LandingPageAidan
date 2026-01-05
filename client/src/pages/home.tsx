@@ -7,9 +7,33 @@ import demogorgonImage from "@assets/image_1767654775177.png";
 function SquidDivider() {
   return (
     <div className="flex items-center justify-center gap-7 my-12">
-      <span className="text-lg opacity-60 text-white">&#9675;</span>
-      <span className="text-lg opacity-60 text-white">&#9651;</span>
-      <span className="text-lg opacity-60 text-white">&#11036;</span>
+      <span 
+        className="text-xl font-bold"
+        style={{ 
+          color: '#ff0080', 
+          textShadow: '0 0 10px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff0080',
+        }}
+      >
+        &#9675;
+      </span>
+      <span 
+        className="text-xl font-bold"
+        style={{ 
+          color: '#00ff9f', 
+          textShadow: '0 0 10px #00ff9f, 0 0 20px #00ff9f, 0 0 30px #00ff9f',
+        }}
+      >
+        &#9651;
+      </span>
+      <span 
+        className="text-xl font-bold"
+        style={{ 
+          color: '#ff0080', 
+          textShadow: '0 0 10px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff0080',
+        }}
+      >
+        &#11036;
+      </span>
     </div>
   );
 }
