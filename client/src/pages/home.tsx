@@ -6,34 +6,43 @@ import demogorgonImage from "@assets/image_1767654775177.png";
 
 function SquidDivider() {
   return (
-    <div className="flex items-center justify-center gap-7 my-12">
-      <span 
-        className="text-xl font-bold"
-        style={{ 
-          color: '#ff0080', 
-          textShadow: '0 0 10px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff0080',
-        }}
-      >
-        &#9675;
-      </span>
-      <span 
-        className="text-xl font-bold"
-        style={{ 
-          color: '#00ff9f', 
-          textShadow: '0 0 10px #00ff9f, 0 0 20px #00ff9f, 0 0 30px #00ff9f',
-        }}
-      >
-        &#9651;
-      </span>
-      <span 
-        className="text-xl font-bold"
-        style={{ 
-          color: '#ff0080', 
-          textShadow: '0 0 10px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff0080',
-        }}
-      >
-        &#11036;
-      </span>
+    <div className="flex items-center justify-center gap-10 my-12">
+      <div className="relative animate-squid-pulse-1">
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+          <circle 
+            cx="12" 
+            cy="12" 
+            r="9" 
+            stroke="#ff0080" 
+            strokeWidth="2.5"
+            style={{ filter: 'drop-shadow(0 0 6px #ff0080) drop-shadow(0 0 12px #ff0080)' }}
+          />
+        </svg>
+      </div>
+      <div className="relative animate-squid-pulse-2">
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+          <path 
+            d="M12 3L21 20H3L12 3Z" 
+            stroke="#00ff9f" 
+            strokeWidth="2.5"
+            strokeLinejoin="round"
+            style={{ filter: 'drop-shadow(0 0 6px #00ff9f) drop-shadow(0 0 12px #00ff9f)' }}
+          />
+        </svg>
+      </div>
+      <div className="relative animate-squid-pulse-3">
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+          <rect 
+            x="4" 
+            y="4" 
+            width="16" 
+            height="16" 
+            stroke="#ff0080" 
+            strokeWidth="2.5"
+            style={{ filter: 'drop-shadow(0 0 6px #ff0080) drop-shadow(0 0 12px #ff0080)' }}
+          />
+        </svg>
+      </div>
     </div>
   );
 }

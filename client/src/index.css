@@ -393,3 +393,22 @@
 
 .animate-flash-1 { animation: flash-1 3s ease-out infinite; }
 .animate-flash-2 { animation: flash-2 4s ease-out infinite 1s; }
+
+@keyframes squid-pulse-1 {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes squid-pulse-2 {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes squid-pulse-3 {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+.animate-squid-pulse-1 { animation: squid-pulse-1 3s ease-in-out infinite; }
+.animate-squid-pulse-2 { animation: squid-pulse-2 3s ease-in-out infinite 1s; }
+.animate-squid-pulse-3 { animation: squid-pulse-3 3s ease-in-out infinite 2s; }
