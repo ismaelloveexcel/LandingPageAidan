@@ -70,7 +70,7 @@ function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
       <img
         src={demogorgonImage}
         alt=""
-        className="h-[85vh] max-h-[900px] object-contain opacity-20 select-none"
+        className="h-[55vh] max-h-[500px] object-contain opacity-15 select-none"
         style={{
           filter: eyesActive 
             ? 'brightness(1.1) saturate(1.3)' 
@@ -80,26 +80,26 @@ function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
       />
       <div 
         className={`
-          absolute w-[3px] h-[3px] rounded-full
+          absolute w-[2px] h-[2px] rounded-full
           transition-all ease-in-out
-          ${eyesActive ? 'opacity-100 shadow-[0_0_12px_6px_rgba(180,30,40,0.9)]' : 'opacity-0'}
+          ${eyesActive ? 'opacity-100 shadow-[0_0_10px_5px_rgba(180,30,40,0.9)]' : 'opacity-0'}
         `}
         style={{
-          top: '29.5%',
-          left: 'calc(50% - 8px)',
+          top: '37%',
+          left: 'calc(50% - 5px)',
           backgroundColor: '#b01e28',
           transitionDuration: '400ms',
         }}
       />
       <div 
         className={`
-          absolute w-[3px] h-[3px] rounded-full
+          absolute w-[2px] h-[2px] rounded-full
           transition-all ease-in-out
-          ${eyesActive ? 'opacity-100 shadow-[0_0_12px_6px_rgba(180,30,40,0.9)]' : 'opacity-0'}
+          ${eyesActive ? 'opacity-100 shadow-[0_0_10px_5px_rgba(180,30,40,0.9)]' : 'opacity-0'}
         `}
         style={{
-          top: '29.5%',
-          left: 'calc(50% + 5px)',
+          top: '37%',
+          left: 'calc(50% + 3px)',
           backgroundColor: '#b01e28',
           transitionDuration: '400ms',
         }}
