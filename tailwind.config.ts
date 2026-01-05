@@ -81,6 +81,10 @@ export default {
           busy: "rgb(239 68 68)",
           offline: "rgb(156 163 175)",
         },
+        vault: {
+          red: "hsl(var(--vault-red) / <alpha-value>)",
+          muted: "hsl(var(--vault-muted) / <alpha-value>)",
+        },
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
@@ -96,10 +100,30 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 0 rgba(155, 28, 43, 0)" },
+          "50%": { boxShadow: "0 0 14px rgba(155, 28, 43, 0.18)" },
+        },
+        "pulse-glow-2": {
+          "0%, 100%": { boxShadow: "0 0 0 rgba(155, 28, 43, 0)" },
+          "50%": { boxShadow: "0 0 14px rgba(155, 28, 43, 0.22)" },
+        },
+        "pulse-glow-3": {
+          "0%, 100%": { boxShadow: "0 0 0 rgba(155, 28, 43, 0)" },
+          "50%": { boxShadow: "0 0 14px rgba(155, 28, 43, 0.16)" },
+        },
+        "eye-blink": {
+          "0%, 90%, 100%": { opacity: "1" },
+          "95%": { opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-glow": "pulse-glow 14s ease-in-out infinite",
+        "pulse-glow-2": "pulse-glow-2 18s ease-in-out infinite",
+        "pulse-glow-3": "pulse-glow-3 22s ease-in-out infinite",
+        "eye-blink": "eye-blink 8s ease-in-out infinite",
       },
     },
   },
