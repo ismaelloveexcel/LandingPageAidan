@@ -55,6 +55,65 @@ function AppTileCard({
   );
 }
 
+function SkyBattle() {
+  return (
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div 
+        className="absolute inset-x-0 top-0 h-[35%]"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(40, 25, 35, 0.6) 0%, rgba(60, 20, 30, 0.3) 40%, transparent 100%)',
+        }}
+      />
+      <svg
+        className="absolute w-8 h-8 opacity-20 animate-plane-1"
+        style={{ top: '8%', left: '15%' }}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" className="text-white"/>
+      </svg>
+      
+      <svg
+        className="absolute w-6 h-6 opacity-15 animate-plane-2"
+        style={{ top: '12%', left: '25%' }}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" className="text-white"/>
+      </svg>
+      
+      <svg
+        className="absolute w-10 h-10 opacity-25 animate-plane-3"
+        style={{ top: '5%', right: '20%' }}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" className="text-white" transform="scale(-1,1) translate(-24,0)"/>
+      </svg>
+      
+      <svg
+        className="absolute w-7 h-7 opacity-20 animate-plane-4"
+        style={{ top: '15%', right: '30%' }}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" className="text-white" transform="scale(-1,1) translate(-24,0)"/>
+      </svg>
+
+      <div className="absolute w-1 h-1 bg-orange-500/60 rounded-full animate-bullet-1" style={{ top: '10%', left: '22%' }} />
+      <div className="absolute w-1 h-1 bg-orange-500/50 rounded-full animate-bullet-2" style={{ top: '8%', right: '28%' }} />
+      <div className="absolute w-1 h-1 bg-red-500/40 rounded-full animate-bullet-3" style={{ top: '14%', left: '30%' }} />
+      
+      <div className="absolute w-3 h-3 opacity-30 animate-explosion-1" style={{ top: '11%', left: '35%' }}>
+        <div className="w-full h-full bg-orange-400/50 rounded-full blur-sm" />
+      </div>
+      <div className="absolute w-2 h-2 opacity-20 animate-explosion-2" style={{ top: '7%', right: '35%' }}>
+        <div className="w-full h-full bg-yellow-500/40 rounded-full blur-sm" />
+      </div>
+    </div>
+  );
+}
+
 function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
   return (
     <div 
@@ -174,6 +233,7 @@ export default function Home() {
         )}
       </main>
 
+      <SkyBattle />
       <DemogorgonBackground eyesActive={eyesActive} />
       <Footer />
     </div>
