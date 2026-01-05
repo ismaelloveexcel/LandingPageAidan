@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLocation } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import type { AppTile } from "@shared/schema";
+import demogorgonImage from "@assets/image_1767654775177.png";
 
 function SquidDivider() {
   return (
@@ -54,133 +55,55 @@ function AppTileCard({
   );
 }
 
-function Demogorgon({ eyesActive }: { eyesActive: boolean }) {
+function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
   return (
     <div 
-      className="fixed right-[-90px] top-[18%] w-[300px] h-[460px] opacity-[0.28] pointer-events-none z-0 md:w-[420px] md:h-[620px] md:right-[-120px]"
-      data-testid="demogorgon"
+      className="fixed inset-0 pointer-events-none z-0 flex items-center justify-center overflow-hidden"
+      data-testid="demogorgon-background"
     >
-      <svg
-        viewBox="0 0 200 300"
-        className="w-full h-full"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M100 20 L60 0 L70 40 L30 30 L50 60 L10 70 L40 90 L20 120 L50 110 L40 150 L60 130 L55 180 L80 160 L75 200 L100 180 L125 200 L120 160 L145 180 L140 130 L160 150 L150 110 L180 120 L160 90 L190 70 L150 60 L170 30 L130 40 L140 0 L100 20Z"
-          fill="currentColor"
-          className="text-white/30"
-        />
-        <ellipse
-          cx="100"
-          cy="200"
-          rx="40"
-          ry="80"
-          fill="currentColor"
-          className="text-white/30"
-        />
-        <path
-          d="M60 280 L65 260 L55 240 L60 220 L50 200"
-          stroke="currentColor"
-          strokeWidth="8"
-          strokeLinecap="round"
-          className="text-white/30"
-        />
-        <path
-          d="M140 280 L135 260 L145 240 L140 220 L150 200"
-          stroke="currentColor"
-          strokeWidth="8"
-          strokeLinecap="round"
-          className="text-white/30"
-        />
-        <path
-          d="M70 295 L75 280 L70 265"
-          stroke="currentColor"
-          strokeWidth="6"
-          strokeLinecap="round"
-          className="text-white/30"
-        />
-        <path
-          d="M130 295 L125 280 L130 265"
-          stroke="currentColor"
-          strokeWidth="6"
-          strokeLinecap="round"
-          className="text-white/30"
-        />
-      </svg>
-      
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse at center, rgba(30, 10, 15, 0.4) 0%, transparent 70%)',
+        }}
+      />
+      <img
+        src={demogorgonImage}
+        alt=""
+        className="h-[85vh] max-h-[900px] object-contain opacity-20 select-none"
+        style={{
+          filter: eyesActive 
+            ? 'brightness(1.1) saturate(1.3)' 
+            : 'brightness(0.6) saturate(0.5)',
+          transition: 'filter 0.5s ease-in-out',
+        }}
+      />
       <div 
         className={`
-          absolute top-[38%] left-[46%] w-9 h-3.5
-          transition-opacity duration-[350ms] ease-in-out
-          ${eyesActive ? 'opacity-100' : 'opacity-0'}
+          absolute w-[3px] h-[3px] rounded-full
+          transition-all ease-in-out
+          ${eyesActive ? 'opacity-100 shadow-[0_0_12px_6px_rgba(180,30,40,0.9)]' : 'opacity-0'}
         `}
         style={{
-          background: `
-            radial-gradient(circle, rgba(155,28,43,0.9) 35%, transparent 65%) left,
-            radial-gradient(circle, rgba(155,28,43,0.9) 35%, transparent 65%) right
-          `,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '12px 12px',
-          backgroundPosition: 'left center, right center',
-          filter: 'blur(0.6px)',
+          top: '29.5%',
+          left: 'calc(50% - 8px)',
+          backgroundColor: '#b01e28',
+          transitionDuration: '400ms',
         }}
-        data-testid="demogorgon-eyes"
       />
-    </div>
-  );
-}
-
-function Bat() {
-  return (
-    <div 
-      className="fixed left-[18px] bottom-[110px] w-[140px] h-[50px] opacity-60 transition-transform duration-[600ms] ease-out hover:rotate-[-6deg] hover:scale-105 active:rotate-[-6deg] active:scale-105 z-[1]"
-      data-testid="bat"
-    >
-      <svg
-        viewBox="0 0 140 50"
-        className="w-full h-full"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M70 25 
-             C60 20, 40 5, 10 10 
-             C20 15, 25 20, 30 25 
-             C25 25, 15 30, 5 35 
-             C20 32, 35 30, 50 28 
-             C55 30, 60 35, 70 38 
-             C80 35, 85 30, 90 28 
-             C105 30, 120 32, 135 35 
-             C125 30, 115 25, 110 25 
-             C115 20, 120 15, 130 10 
-             C100 5, 80 20, 70 25Z"
-          fill="currentColor"
-          className="text-white/80"
-        />
-        <ellipse
-          cx="70"
-          cy="28"
-          rx="8"
-          ry="6"
-          fill="currentColor"
-          className="text-white/90"
-        />
-        <circle cx="66" cy="26" r="1.5" fill="#0b0e14" />
-        <circle cx="74" cy="26" r="1.5" fill="#0b0e14" />
-        <path
-          d="M68 30 Q70 32, 72 30"
-          stroke="#0b0e14"
-          strokeWidth="0.8"
-          fill="none"
-        />
-        <path
-          d="M63 22 L65 25 M77 22 L75 25"
-          stroke="currentColor"
-          strokeWidth="1"
-          className="text-white/80"
-        />
-      </svg>
+      <div 
+        className={`
+          absolute w-[3px] h-[3px] rounded-full
+          transition-all ease-in-out
+          ${eyesActive ? 'opacity-100 shadow-[0_0_12px_6px_rgba(180,30,40,0.9)]' : 'opacity-0'}
+        `}
+        style={{
+          top: '29.5%',
+          left: 'calc(50% + 5px)',
+          backgroundColor: '#b01e28',
+          transitionDuration: '400ms',
+        }}
+      />
     </div>
   );
 }
@@ -234,7 +157,7 @@ export default function Home() {
     <div 
       className="min-h-screen flex flex-col items-center overflow-x-hidden"
       style={{
-        background: 'radial-gradient(circle at top, #141a2a, #0b0e14)',
+        background: '#080a0e',
       }}
     >
       <header className="mt-12 text-center" data-testid="header">
@@ -277,8 +200,7 @@ export default function Home() {
         )}
       </main>
 
-      <Demogorgon eyesActive={eyesActive} />
-      <Bat />
+      <DemogorgonBackground eyesActive={eyesActive} />
       <Footer />
     </div>
   );
