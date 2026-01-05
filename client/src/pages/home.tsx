@@ -64,15 +64,31 @@ function SkyBattle() {
           background: 'linear-gradient(to bottom, rgba(40, 25, 35, 0.6) 0%, rgba(60, 20, 30, 0.3) 40%, transparent 100%)',
         }}
       />
-      <div className="absolute w-2 h-2 rounded-full animate-bullet-1" style={{ top: '10%', left: '24%', background: 'radial-gradient(circle, #ff6b35 0%, #ff4500 50%, transparent 100%)', boxShadow: '0 0 6px #ff4500' }} />
-      <div className="absolute w-2 h-2 rounded-full animate-bullet-2" style={{ top: '7%', right: '24%', background: 'radial-gradient(circle, #ff6b35 0%, #ff4500 50%, transparent 100%)', boxShadow: '0 0 6px #ff4500' }} />
-      <div className="absolute w-1.5 h-1.5 rounded-full animate-bullet-3" style={{ top: '16%', left: '35%', background: 'radial-gradient(circle, #ffa500 0%, #ff6600 50%, transparent 100%)', boxShadow: '0 0 4px #ff6600' }} />
+      <div className="absolute w-2 h-2 rounded-full animate-bullet-1" style={{ top: '8%', left: '15%', background: 'radial-gradient(circle, #ff6b35 0%, #ff4500 50%, transparent 100%)', boxShadow: '0 0 8px #ff4500' }} />
+      <div className="absolute w-2 h-2 rounded-full animate-bullet-2" style={{ top: '5%', right: '20%', background: 'radial-gradient(circle, #ff6b35 0%, #ff4500 50%, transparent 100%)', boxShadow: '0 0 8px #ff4500' }} />
+      <div className="absolute w-1.5 h-1.5 rounded-full animate-bullet-3" style={{ top: '12%', left: '40%', background: 'radial-gradient(circle, #ffa500 0%, #ff6600 50%, transparent 100%)', boxShadow: '0 0 6px #ff6600' }} />
+      <div className="absolute w-2 h-2 rounded-full animate-bullet-4" style={{ top: '6%', left: '55%', background: 'radial-gradient(circle, #ff5533 0%, #cc3300 50%, transparent 100%)', boxShadow: '0 0 10px #ff3300' }} />
+      <div className="absolute w-1.5 h-1.5 rounded-full animate-bullet-5" style={{ top: '10%', right: '35%', background: 'radial-gradient(circle, #ffaa00 0%, #ff7700 50%, transparent 100%)', boxShadow: '0 0 6px #ff7700' }} />
+      <div className="absolute w-2 h-2 rounded-full animate-bullet-6" style={{ top: '4%', left: '70%', background: 'radial-gradient(circle, #ff6b35 0%, #ff4500 50%, transparent 100%)', boxShadow: '0 0 8px #ff4500' }} />
       
-      <div className="absolute w-6 h-6 animate-explosion-1" style={{ top: '11%', left: '40%' }}>
+      <div className="absolute w-8 h-8 animate-explosion-1" style={{ top: '9%', left: '30%' }}>
+        <div className="w-full h-full rounded-full blur-lg" style={{ background: 'radial-gradient(circle, rgba(255,120,40,0.7) 0%, rgba(255,60,10,0.4) 40%, transparent 100%)' }} />
+      </div>
+      <div className="absolute w-6 h-6 animate-explosion-2" style={{ top: '6%', right: '45%' }}>
+        <div className="w-full h-full rounded-full blur-lg" style={{ background: 'radial-gradient(circle, rgba(255,180,60,0.6) 0%, rgba(255,80,20,0.3) 40%, transparent 100%)' }} />
+      </div>
+      <div className="absolute w-10 h-10 animate-explosion-3" style={{ top: '7%', left: '60%' }}>
+        <div className="w-full h-full rounded-full blur-xl" style={{ background: 'radial-gradient(circle, rgba(255,100,30,0.5) 0%, rgba(200,50,10,0.2) 50%, transparent 100%)' }} />
+      </div>
+      <div className="absolute w-5 h-5 animate-explosion-4" style={{ top: '11%', right: '25%' }}>
         <div className="w-full h-full rounded-full blur-md" style={{ background: 'radial-gradient(circle, rgba(255,150,50,0.6) 0%, rgba(255,80,20,0.3) 50%, transparent 100%)' }} />
       </div>
-      <div className="absolute w-5 h-5 animate-explosion-2" style={{ top: '8%', right: '38%' }}>
-        <div className="w-full h-full rounded-full blur-md" style={{ background: 'radial-gradient(circle, rgba(255,200,80,0.5) 0%, rgba(255,100,30,0.2) 50%, transparent 100%)' }} />
+      
+      <div className="absolute w-16 h-16 animate-flash-1" style={{ top: '5%', left: '25%' }}>
+        <div className="w-full h-full rounded-full blur-2xl" style={{ background: 'radial-gradient(circle, rgba(255,200,150,0.4) 0%, transparent 70%)' }} />
+      </div>
+      <div className="absolute w-20 h-20 animate-flash-2" style={{ top: '3%', right: '30%' }}>
+        <div className="w-full h-full rounded-full blur-2xl" style={{ background: 'radial-gradient(circle, rgba(255,180,120,0.35) 0%, transparent 70%)' }} />
       </div>
     </div>
   );
@@ -157,7 +173,7 @@ export default function Home() {
         background: '#080a0e',
       }}
     >
-      <header className="mt-12 text-center" data-testid="header">
+      <header className="mt-[30vh] text-center" data-testid="header">
         <h1 className="text-[2.2rem] tracking-[0.15em] m-0 text-white font-normal">
           AIDAN'S VAULT
         </h1>

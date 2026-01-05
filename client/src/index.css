@@ -352,12 +352,28 @@
   65% { opacity: 0; transform: scale(1.8); }
 }
 
-.animate-plane-1 { animation: plane-1 8s ease-in-out infinite; }
-.animate-plane-2 { animation: plane-2 6s ease-in-out infinite 0.5s; }
-.animate-plane-3 { animation: plane-3 9s ease-in-out infinite 1s; }
-.animate-plane-4 { animation: plane-4 7s ease-in-out infinite 0.3s; }
-.animate-bullet-1 { animation: bullet-1 3s linear infinite; }
-.animate-bullet-2 { animation: bullet-2 4s linear infinite 1s; }
-.animate-bullet-3 { animation: bullet-3 3.5s linear infinite 0.5s; }
-.animate-explosion-1 { animation: explosion-1 5s ease-out infinite; }
-.animate-explosion-2 { animation: explosion-2 6s ease-out infinite 2s; }
+.animate-bullet-1 { animation: bullet-1 2.5s linear infinite; }
+.animate-bullet-2 { animation: bullet-2 3s linear infinite 0.8s; }
+.animate-bullet-3 { animation: bullet-3 2.8s linear infinite 0.3s; }
+.animate-bullet-4 { animation: bullet-1 3.2s linear infinite 1.5s; }
+.animate-bullet-5 { animation: bullet-2 2.6s linear infinite 2s; }
+.animate-bullet-6 { animation: bullet-3 3s linear infinite 0.6s; }
+.animate-explosion-1 { animation: explosion-1 4s ease-out infinite; }
+.animate-explosion-2 { animation: explosion-2 5s ease-out infinite 1.5s; }
+.animate-explosion-3 { animation: explosion-1 6s ease-out infinite 3s; }
+.animate-explosion-4 { animation: explosion-2 4.5s ease-out infinite 2s; }
+
+@keyframes flash-1 {
+  0%, 85%, 100% { opacity: 0; transform: scale(0.8); }
+  90% { opacity: 1; transform: scale(1.2); }
+  95% { opacity: 0.5; transform: scale(1); }
+}
+
+@keyframes flash-2 {
+  0%, 60%, 100% { opacity: 0; transform: scale(0.8); }
+  65% { opacity: 0.8; transform: scale(1.3); }
+  75% { opacity: 0.3; transform: scale(1); }
+}
+
+.animate-flash-1 { animation: flash-1 3s ease-out infinite; }
+.animate-flash-2 { animation: flash-2 4s ease-out infinite 1s; }
