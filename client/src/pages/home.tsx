@@ -64,6 +64,30 @@ function SkyBattle() {
           background: 'linear-gradient(to bottom, rgba(40, 25, 35, 0.6) 0%, rgba(60, 20, 30, 0.3) 40%, transparent 100%)',
         }}
       />
+      <div className="absolute animate-plane-1" style={{ top: '6%', left: '10%' }}>
+        <svg className="w-10 h-10 opacity-40" viewBox="0 0 64 64" fill="none">
+          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(80,40,50,0.9)"/>
+        </svg>
+      </div>
+      
+      <div className="absolute animate-plane-2" style={{ top: '10%', left: '22%' }}>
+        <svg className="w-7 h-7 opacity-30" viewBox="0 0 64 64" fill="none">
+          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(60,30,40,0.8)"/>
+        </svg>
+      </div>
+      
+      <div className="absolute animate-plane-3" style={{ top: '4%', right: '12%' }}>
+        <svg className="w-12 h-12 opacity-45" viewBox="0 0 64 64" fill="none" style={{ transform: 'scaleX(-1)' }}>
+          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(90,45,55,0.9)"/>
+        </svg>
+      </div>
+      
+      <div className="absolute animate-plane-4" style={{ top: '12%', right: '28%' }}>
+        <svg className="w-8 h-8 opacity-35" viewBox="0 0 64 64" fill="none" style={{ transform: 'scaleX(-1)' }}>
+          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(70,35,45,0.8)"/>
+        </svg>
+      </div>
+
       <div className="absolute w-2 h-2 rounded-full animate-bullet-1" style={{ top: '8%', left: '15%', background: 'radial-gradient(circle, #ff6b35 0%, #ff4500 50%, transparent 100%)', boxShadow: '0 0 8px #ff4500' }} />
       <div className="absolute w-2 h-2 rounded-full animate-bullet-2" style={{ top: '5%', right: '20%', background: 'radial-gradient(circle, #ff6b35 0%, #ff4500 50%, transparent 100%)', boxShadow: '0 0 8px #ff4500' }} />
       <div className="absolute w-1.5 h-1.5 rounded-full animate-bullet-3" style={{ top: '12%', left: '40%', background: 'radial-gradient(circle, #ffa500 0%, #ff6600 50%, transparent 100%)', boxShadow: '0 0 6px #ff6600' }} />

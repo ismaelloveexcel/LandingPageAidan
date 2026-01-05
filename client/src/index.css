@@ -352,6 +352,10 @@
   65% { opacity: 0; transform: scale(1.8); }
 }
 
+.animate-plane-1 { animation: plane-1 10s ease-in-out infinite; }
+.animate-plane-2 { animation: plane-2 8s ease-in-out infinite 0.5s; }
+.animate-plane-3 { animation: plane-3 11s ease-in-out infinite 1s; }
+.animate-plane-4 { animation: plane-4 9s ease-in-out infinite 0.3s; }
 .animate-bullet-1 { animation: bullet-1 2.5s linear infinite; }
 .animate-bullet-2 { animation: bullet-2 3s linear infinite 0.8s; }
 .animate-bullet-3 { animation: bullet-3 2.8s linear infinite 0.3s; }
