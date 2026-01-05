@@ -1,0 +1,255 @@
+FINAL MOBILE-FIRST index.html (REPLIT-READY)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aidan’s Vault</title>
+
+<style>
+/* ---------- BASE ---------- */
+:root {
+  --bg: #0b0e14;
+  --red: #9b1c2b;
+  --muted: #7a8394;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #141a2a, var(--bg));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* ---------- TITLE ---------- */
+header {
+  margin-top: 48px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 0.15em;
+  margin: 0;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: var(--muted);
+}
+
+/* ---------- SQUID GAME DIVIDER ---------- */
+.squid-divider {
+  margin: 48px 0 28px;
+  text-align: center;
+}
+
+.squid-divider span {
+  margin: 0 14px;
+  font-size: 1.1rem;
+  opacity: 0.6;
+}
+
+/* ---------- APP GRID ---------- */
+main {
+  width: 90%;
+  max-width: 420px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  z-index: 2;
+}
+
+.app-tile {
+  position: relative;
+  padding: 22px;
+  border-radius: 18px 18px 14px 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  text-decoration: none;
+  color: white;
+  transition: transform 0.25s cubic-bezier(.17,.67,.45,1.32),
+              box-shadow 0.3s ease;
+  animation: pulse 14s ease-in-out infinite;
+}
+
+.app-tile:nth-child(2) { animation-duration: 18s; }
+.app-tile:nth-child(3) { animation-duration: 22s; }
+
+.app-tile:hover,
+.app-tile:active {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+.app-tile span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 rgba(155,28,43,0); }
+  50% { box-shadow: 0 0 14px rgba(155,28,43,0.18); }
+}
+
+/* ---------- DEMOGORGON ---------- */
+.demogorgon {
+  position: fixed;
+  right: -90px;
+  top: 18%;
+  width: 300px;
+  height: 460px;
+  background: url("demogorgon-silhouette.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.demogorgon .eyes {
+  position: absolute;
+  top: 38%;
+  left: 46%;
+  width: 36px;
+  height: 14px;
+  background:
+    radial-gradient(circle, rgba(155,28,43,0.9) 35%, transparent 65%) left,
+    radial-gradient(circle, rgba(155,28,43,0.9) 35%, transparent 65%) right;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position: left center, right center;
+  opacity: 0;
+  filter: blur(0.6px);
+  transition: opacity 0.35s ease;
+}
+
+/* ---------- BAT ---------- */
+.bat {
+  position: fixed;
+  left: 18px;
+  bottom: 110px;
+  width: 140px;
+  height: 50px;
+  background: url("bat.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.6;
+  transition: transform 0.6s ease;
+  z-index: 1;
+}
+
+.bat:hover,
+.bat:active {
+  transform: rotate(-6deg) scale(1.05);
+}
+
+/* ---------- FOOTER / ADMIN ---------- */
+footer {
+  margin-top: auto;
+  margin-bottom: 36px;
+  text-align: right;
+  width: 100%;
+  padding-right: 32px;
+}
+
+#admin-001 {
+  font-size: 1.7rem;
+  letter-spacing: 0.15em;
+  color: var(--red);
+  opacity: 0.7;
+  user-select: none;
+}
+
+footer small {
+  display: block;
+  font-size: 0.55rem;
+  letter-spacing: 0.35em;
+  color: var(--muted);
+  opacity: 0.5;
+}
+
+/* ---------- DESKTOP ENHANCEMENT ---------- */
+@media (min-width: 768px) {
+  main {
+    max-width: 720px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .demogorgon {
+    width: 420px;
+    height: 620px;
+    right: -120px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>AIDAN’S VAULT</h1>
+  <p>EXPERIMENTS · WORLDS · LEVELS</p>
+</header>
+
+<div class="squid-divider">
+  <span>◯</span><span>△</span><span>⬜</span>
+</div>
+
+<main>
+  <a class="app-tile" href="#" target="_blank">
+    Midnight Hatch
+    <span>EXPERIMENT</span>
+  </a>
+  <a class="app-tile" href="#" target="_blank">
+    Before Midnight
+    <span>WORLD</span>
+  </a>
+  <a class="app-tile" href="#" target="_blank">
+    Monster Lab
+    <span>PROTOTYPE</span>
+  </a>
+</main>
+
+<div class="demogorgon">
+  <div class="eyes"></div>
+</div>
+
+<div class="bat"></div>
+
+<footer>
+  <div id="admin-001">001</div>
+  <small>ACCESS LEVEL</small>
+</footer>
+
+<script>
+/* DEMOGORGON EYES REACT */
+const tiles = document.querySelectorAll(".app-tile");
+const eyes = document.querySelector(".demogorgon .eyes");
+
+tiles.forEach(tile => {
+  tile.addEventListener("mouseenter", () => eyes.style.opacity = "1");
+  tile.addEventListener("mouseleave", () => eyes.style.opacity = "0");
+  tile.addEventListener("touchstart", () => eyes.style.opacity = "1");
+});
+
+/* ADMIN ACCESS */
+document.getElementById("admin-001").onclick = () => {
+  window.location.href = "/admin.html";
+};
+</script>
+
+</body>
+</html>
