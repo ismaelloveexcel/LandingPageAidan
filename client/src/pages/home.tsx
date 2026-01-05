@@ -78,32 +78,6 @@ function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
           transition: 'filter 0.5s ease-in-out',
         }}
       />
-      <div 
-        className={`
-          absolute w-[2px] h-[2px] rounded-full
-          transition-all ease-in-out
-          ${eyesActive ? 'opacity-100 shadow-[0_0_10px_5px_rgba(180,30,40,0.9)]' : 'opacity-0'}
-        `}
-        style={{
-          top: '37%',
-          left: 'calc(50% - 5px)',
-          backgroundColor: '#b01e28',
-          transitionDuration: '400ms',
-        }}
-      />
-      <div 
-        className={`
-          absolute w-[2px] h-[2px] rounded-full
-          transition-all ease-in-out
-          ${eyesActive ? 'opacity-100 shadow-[0_0_10px_5px_rgba(180,30,40,0.9)]' : 'opacity-0'}
-        `}
-        style={{
-          top: '37%',
-          left: 'calc(50% + 3px)',
-          backgroundColor: '#b01e28',
-          transitionDuration: '400ms',
-        }}
-      />
     </div>
   );
 }
