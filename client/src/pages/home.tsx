@@ -110,30 +110,30 @@ function SkyBattle() {
       <div 
         className="absolute inset-x-0 top-0 h-[35%]"
         style={{
-          background: 'linear-gradient(to bottom, rgba(40, 25, 35, 0.6) 0%, rgba(60, 20, 30, 0.3) 40%, transparent 100%)',
+          background: 'linear-gradient(to bottom, rgba(40, 25, 35, 0.4) 0%, rgba(60, 20, 30, 0.2) 40%, transparent 100%)',
         }}
       />
       <div className="absolute animate-plane-1" style={{ top: '6%', left: '10%' }}>
-        <svg className="w-10 h-10 opacity-40" viewBox="0 0 64 64" fill="none">
-          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(80,40,50,0.9)"/>
+        <svg className="w-10 h-10 opacity-50" viewBox="0 0 64 64" fill="none" style={{ filter: 'drop-shadow(0 0 8px rgba(255,100,120,0.4))' }}>
+          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(90,50,60,0.95)"/>
         </svg>
       </div>
       
       <div className="absolute animate-plane-2" style={{ top: '10%', left: '22%' }}>
-        <svg className="w-7 h-7 opacity-30" viewBox="0 0 64 64" fill="none">
-          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(60,30,40,0.8)"/>
+        <svg className="w-7 h-7 opacity-38" viewBox="0 0 64 64" fill="none" style={{ filter: 'drop-shadow(0 0 6px rgba(255,80,100,0.3))' }}>
+          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(70,35,45,0.85)"/>
         </svg>
       </div>
       
       <div className="absolute animate-plane-3" style={{ top: '4%', right: '12%' }}>
-        <svg className="w-12 h-12 opacity-45" viewBox="0 0 64 64" fill="none" style={{ transform: 'scaleX(-1)' }}>
-          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(90,45,55,0.9)"/>
+        <svg className="w-12 h-12 opacity-55" viewBox="0 0 64 64" fill="none" style={{ transform: 'scaleX(-1)', filter: 'drop-shadow(0 0 10px rgba(255,120,140,0.45))' }}>
+          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(100,55,65,0.95)"/>
         </svg>
       </div>
       
       <div className="absolute animate-plane-4" style={{ top: '12%', right: '28%' }}>
-        <svg className="w-8 h-8 opacity-35" viewBox="0 0 64 64" fill="none" style={{ transform: 'scaleX(-1)' }}>
-          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(70,35,45,0.8)"/>
+        <svg className="w-8 h-8 opacity-42" viewBox="0 0 64 64" fill="none" style={{ transform: 'scaleX(-1)', filter: 'drop-shadow(0 0 7px rgba(255,90,110,0.35))' }}>
+          <path d="M56 28L44 24V16c0-1.5-1-3-3-3s-3 1.5-3 3v8L14 28c-1.5 0.5-2.5 1.5-2.5 2.5s1 2 2.5 2l24-1.5v8l-5 3v3l7.5-2 7.5 2v-3l-5-3V31l24 1.5c1.5 0 2.5-0.8 2.5-2S57.5 28.5 56 28z" fill="rgba(80,40,50,0.88)"/>
         </svg>
       </div>
 
@@ -173,7 +173,7 @@ function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
       className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
       data-testid="demogorgon-background"
     >
-      {/* Fortnite plane as full background - pushed back, less dark */}
+      {/* Fortnite plane as full background - more visible and dramatic */}
       <img
         src={fortnitePlaneImage}
         alt=""
@@ -183,54 +183,54 @@ function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
           height: '100%',
           top: 0,
           left: 0,
-          opacity: 0.2,
-          filter: 'brightness(0.7) saturate(0.6)',
+          opacity: 0.45,
+          filter: 'brightness(0.9) saturate(1.1) contrast(1.1)',
           transform: 'scale(1.1)',
         }}
       />
       
-      {/* Lighter vignette overlay */}
+      {/* Refined vignette overlay - less aggressive */}
       <div 
         className="absolute inset-0"
         style={{
           background: `
-            radial-gradient(ellipse 90% 70% at 50% 40%, transparent 0%, rgba(8, 10, 14, 0.4) 60%, rgba(8, 10, 14, 0.85) 100%),
-            linear-gradient(to bottom, rgba(8, 10, 14, 0.1) 0%, transparent 30%, transparent 70%, rgba(8, 10, 14, 0.8) 100%)
+            radial-gradient(ellipse 85% 65% at 50% 45%, transparent 0%, rgba(8, 10, 14, 0.25) 55%, rgba(8, 10, 14, 0.75) 100%),
+            linear-gradient(to bottom, rgba(8, 10, 14, 0.05) 0%, transparent 35%, transparent 65%, rgba(8, 10, 14, 0.7) 100%)
           `,
         }}
       />
       
-      {/* Side dark fades */}
+      {/* Lighter side fades */}
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to right, rgba(8, 10, 14, 0.6) 0%, transparent 20%, transparent 80%, rgba(8, 10, 14, 0.6) 100%)',
+          background: 'linear-gradient(to right, rgba(8, 10, 14, 0.5) 0%, transparent 25%, transparent 75%, rgba(8, 10, 14, 0.5) 100%)',
         }}
       />
       
-      {/* Demogorgon in front, centered with animation */}
+      {/* Demogorgon in front, centered with enhanced presence */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img
           src={demogorgonImage}
           alt=""
           className="object-contain select-none animate-demogorgon-float"
           style={{
-            height: '55vh',
-            maxHeight: '500px',
-            opacity: 0.28,
+            height: '58vh',
+            maxHeight: '540px',
+            opacity: 0.5,
             filter: eyesActive 
-              ? 'brightness(1.2) saturate(1.2) drop-shadow(0 0 40px rgba(155, 28, 43, 0.5))' 
-              : 'brightness(0.7) saturate(0.6)',
+              ? 'brightness(1.3) saturate(1.3) contrast(1.15) drop-shadow(0 0 50px rgba(155, 28, 43, 0.7)) drop-shadow(0 0 80px rgba(200, 40, 60, 0.4))' 
+              : 'brightness(0.85) saturate(0.85) contrast(1.1) drop-shadow(0 0 30px rgba(0, 0, 0, 0.8))',
             transition: 'filter 0.5s ease-in-out',
           }}
         />
       </div>
       
-      {/* Subtle red glow around center */}
+      {/* Enhanced red glow around center for dramatic effect */}
       <div 
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse 40% 40% at 50% 50%, rgba(155, 28, 43, 0.1) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 45% 45% at 50% 50%, rgba(155, 28, 43, 0.15) 0%, rgba(200, 40, 60, 0.08) 40%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
