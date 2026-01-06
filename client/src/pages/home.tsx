@@ -173,43 +173,64 @@ function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
       className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
       data-testid="demogorgon-background"
     >
-      <div 
-        className="absolute inset-0"
-        style={{
-          background: 'radial-gradient(ellipse at center, rgba(30, 10, 15, 0.4) 0%, transparent 70%)',
-        }}
-      />
-      
+      {/* Fortnite plane as full background */}
       <img
         src={fortnitePlaneImage}
         alt=""
-        className="absolute object-contain select-none animate-chase-plane"
+        className="absolute object-cover select-none"
         style={{
-          width: '35vw',
-          maxWidth: '280px',
-          left: '5%',
-          top: '35%',
-          opacity: 0.4,
-          filter: 'brightness(0.8) saturate(0.9)',
-          transform: 'scaleX(1) rotate(-5deg)',
+          width: '100%',
+          height: '100%',
+          top: 0,
+          left: 0,
+          opacity: 0.35,
+          filter: 'brightness(0.5) saturate(0.7) hue-rotate(-10deg)',
         }}
       />
       
-      <img
-        src={demogorgonImage}
-        alt=""
-        className="absolute object-contain select-none"
+      {/* Dark vignette overlay for seamless blending */}
+      <div 
+        className="absolute inset-0"
         style={{
-          height: '45vh',
-          maxHeight: '400px',
-          right: '8%',
-          top: '30%',
-          opacity: 0.18,
-          filter: eyesActive 
-            ? 'brightness(1.1) saturate(1.3)' 
-            : 'brightness(0.6) saturate(0.5)',
-          transition: 'filter 0.5s ease-in-out',
-          transform: 'scaleX(-1)',
+          background: `
+            radial-gradient(ellipse 80% 60% at 50% 40%, transparent 0%, rgba(8, 10, 14, 0.6) 50%, rgba(8, 10, 14, 0.95) 100%),
+            linear-gradient(to bottom, rgba(8, 10, 14, 0.3) 0%, transparent 20%, transparent 60%, rgba(8, 10, 14, 0.9) 100%)
+          `,
+        }}
+      />
+      
+      {/* Side dark fades */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(to right, rgba(8, 10, 14, 0.8) 0%, transparent 15%, transparent 85%, rgba(8, 10, 14, 0.8) 100%)',
+        }}
+      />
+      
+      {/* Demogorgon in front, centered */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <img
+          src={demogorgonImage}
+          alt=""
+          className="object-contain select-none"
+          style={{
+            height: '55vh',
+            maxHeight: '500px',
+            opacity: 0.25,
+            filter: eyesActive 
+              ? 'brightness(1.2) saturate(1.2) drop-shadow(0 0 30px rgba(155, 28, 43, 0.4))' 
+              : 'brightness(0.7) saturate(0.6)',
+            transition: 'filter 0.5s ease-in-out',
+          }}
+        />
+      </div>
+      
+      {/* Subtle red glow around center */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse 40% 40% at 50% 50%, rgba(155, 28, 43, 0.08) 0%, transparent 70%)',
+          pointerEvents: 'none',
         }}
       />
     </div>
