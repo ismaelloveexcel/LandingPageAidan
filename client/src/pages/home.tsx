@@ -67,21 +67,36 @@ function AppTileCard({
       className={`
         relative block p-4 md:p-5
         rounded-[14px_14px_10px_14px]
-        bg-white/5 
-        border border-white/[0.08]
         text-white no-underline
         transition-all duration-300 ease-[cubic-bezier(.17,.67,.45,1.32)]
         hover:-translate-y-1 hover:scale-[1.02]
-        hover:shadow-[0_12px_30px_rgba(0,0,0,0.6)]
         active:-translate-y-1 active:scale-[1.02]
         ${animationClass}
       `}
+      style={{
+        background: 'linear-gradient(135deg, rgba(255, 0, 128, 0.15) 0%, rgba(0, 255, 159, 0.1) 50%, rgba(123, 104, 238, 0.15) 100%)',
+        border: '1px solid rgba(255, 0, 128, 0.25)',
+        boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 4px 20px rgba(0, 0, 0, 0.4)',
+      }}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
       onTouchStart={onHover}
     >
-      <span className="block text-sm md:text-base font-normal">{tile.title}</span>
-      <span className="block mt-1.5 text-[0.6rem] md:text-[0.65rem] tracking-[0.2em] text-vault-muted">
+      <span 
+        className="block text-sm md:text-base font-medium"
+        style={{ 
+          background: 'linear-gradient(90deg, #fff, #e0d4ff)',
+          WebkitBackgroundClip: 'text',
+          backgroundClip: 'text',
+          color: 'transparent',
+        }}
+      >
+        {tile.title}
+      </span>
+      <span 
+        className="block mt-1.5 text-[0.6rem] md:text-[0.65rem] tracking-[0.2em]"
+        style={{ color: 'rgba(0, 255, 159, 0.7)' }}
+      >
         {tile.category}
       </span>
     </a>
@@ -231,10 +246,23 @@ export default function Home() {
       }}
     >
       <header className="mt-[12vh] md:mt-[15vh] text-center flex-shrink-0" data-testid="header">
-        <h1 className="text-[1.8rem] md:text-[2.2rem] tracking-[0.15em] m-0 text-white font-normal">
+        <h1 
+          className="text-[1.8rem] md:text-[2.2rem] tracking-[0.15em] m-0 font-normal"
+          style={{
+            background: 'linear-gradient(90deg, #ff0080, #00ff9f, #7b68ee, #ff6b35)',
+            backgroundSize: '300% 100%',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'transparent',
+            animation: 'gradient-shift 8s ease infinite',
+          }}
+        >
           AIDAN'S VAULT
         </h1>
-        <p className="mt-1.5 text-[0.7rem] md:text-[0.75rem] tracking-[0.3em] text-vault-muted">
+        <p 
+          className="mt-1.5 text-[0.7rem] md:text-[0.75rem] tracking-[0.3em]"
+          style={{ color: 'rgba(180, 160, 200, 0.8)' }}
+        >
           EXPERIMENTS · WORLDS · LEVELS
         </p>
       </header>

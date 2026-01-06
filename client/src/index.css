@@ -412,3 +412,9 @@
 .animate-squid-pulse-1 { animation: squid-pulse-1 3s ease-in-out infinite; }
 .animate-squid-pulse-2 { animation: squid-pulse-2 3s ease-in-out infinite 1s; }
 .animate-squid-pulse-3 { animation: squid-pulse-3 3s ease-in-out infinite 2s; }
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
