@@ -173,7 +173,7 @@ function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
       className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
       data-testid="demogorgon-background"
     >
-      {/* Fortnite plane as full background */}
+      {/* Fortnite plane as full background - pushed back, less dark */}
       <img
         src={fortnitePlaneImage}
         alt=""
@@ -183,18 +183,19 @@ function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
           height: '100%',
           top: 0,
           left: 0,
-          opacity: 0.35,
-          filter: 'brightness(0.5) saturate(0.7) hue-rotate(-10deg)',
+          opacity: 0.2,
+          filter: 'brightness(0.7) saturate(0.6)',
+          transform: 'scale(1.1)',
         }}
       />
       
-      {/* Dark vignette overlay for seamless blending */}
+      {/* Lighter vignette overlay */}
       <div 
         className="absolute inset-0"
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 50% 40%, transparent 0%, rgba(8, 10, 14, 0.6) 50%, rgba(8, 10, 14, 0.95) 100%),
-            linear-gradient(to bottom, rgba(8, 10, 14, 0.3) 0%, transparent 20%, transparent 60%, rgba(8, 10, 14, 0.9) 100%)
+            radial-gradient(ellipse 90% 70% at 50% 40%, transparent 0%, rgba(8, 10, 14, 0.4) 60%, rgba(8, 10, 14, 0.85) 100%),
+            linear-gradient(to bottom, rgba(8, 10, 14, 0.1) 0%, transparent 30%, transparent 70%, rgba(8, 10, 14, 0.8) 100%)
           `,
         }}
       />
@@ -203,22 +204,22 @@ function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to right, rgba(8, 10, 14, 0.8) 0%, transparent 15%, transparent 85%, rgba(8, 10, 14, 0.8) 100%)',
+          background: 'linear-gradient(to right, rgba(8, 10, 14, 0.6) 0%, transparent 20%, transparent 80%, rgba(8, 10, 14, 0.6) 100%)',
         }}
       />
       
-      {/* Demogorgon in front, centered */}
+      {/* Demogorgon in front, centered with animation */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img
           src={demogorgonImage}
           alt=""
-          className="object-contain select-none"
+          className="object-contain select-none animate-demogorgon-float"
           style={{
             height: '55vh',
             maxHeight: '500px',
-            opacity: 0.25,
+            opacity: 0.28,
             filter: eyesActive 
-              ? 'brightness(1.2) saturate(1.2) drop-shadow(0 0 30px rgba(155, 28, 43, 0.4))' 
+              ? 'brightness(1.2) saturate(1.2) drop-shadow(0 0 40px rgba(155, 28, 43, 0.5))' 
               : 'brightness(0.7) saturate(0.6)',
             transition: 'filter 0.5s ease-in-out',
           }}
@@ -229,7 +230,7 @@ function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
       <div 
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse 40% 40% at 50% 50%, rgba(155, 28, 43, 0.08) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 40% 40% at 50% 50%, rgba(155, 28, 43, 0.1) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />

@@ -437,3 +437,16 @@
 .animate-chase-plane { 
   animation: chase-plane 6s ease-in-out infinite; 
 }
+
+@keyframes demogorgon-float {
+  0%, 100% { 
+    transform: translateY(0) scale(1); 
+  }
+  50% { 
+    transform: translateY(-8px) scale(1.02); 
+  }
+}
+
+.animate-demogorgon-float { 
+  animation: demogorgon-float 4s ease-in-out infinite; 
+}
