@@ -247,16 +247,20 @@ export default function Home() {
     >
       <header className="mt-[12vh] md:mt-[15vh] text-center flex-shrink-0" data-testid="header">
         <h1 
-          className="text-[2.2rem] md:text-[3rem] tracking-wide m-0 font-black italic"
+          className="text-[2.4rem] md:text-[3.2rem] m-0 font-black italic uppercase"
           style={{
-            background: 'linear-gradient(180deg, #fff700 0%, #ffaa00 50%, #ff6600 100%)',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            color: 'transparent',
-            textShadow: '3px 3px 0 rgba(0,0,0,0.3)',
-            WebkitTextStroke: '1px rgba(0,0,0,0.2)',
+            fontFamily: 'system-ui, -apple-system, sans-serif',
+            color: '#ffffff',
+            letterSpacing: '-0.02em',
+            textShadow: `
+              3px 3px 0 #1a1a2e,
+              4px 4px 0 #1a1a2e,
+              5px 5px 0 #1a1a2e,
+              6px 6px 8px rgba(0,0,0,0.5)
+            `,
+            WebkitTextStroke: '2px #1a1a2e',
+            paintOrder: 'stroke fill',
             transform: 'skewX(-5deg)',
-            filter: 'drop-shadow(0 0 10px rgba(255, 200, 0, 0.5))',
           }}
         >
           AIDAN'S VAULT
