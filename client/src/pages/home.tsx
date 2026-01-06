@@ -6,7 +6,7 @@ import demogorgonImage from "@assets/image_1767654775177.png";
 
 function SquidDivider() {
   return (
-    <div className="flex items-center justify-center gap-10 my-12">
+    <div className="flex items-center justify-center gap-10 my-4 md:my-6">
       <div className="relative animate-squid-pulse-1">
         <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
           <circle 
@@ -65,8 +65,8 @@ function AppTileCard({
       rel="noopener noreferrer"
       data-testid={`tile-${tile.id}`}
       className={`
-        relative block p-6 
-        rounded-[18px_18px_14px_18px]
+        relative block p-4 md:p-5
+        rounded-[14px_14px_10px_14px]
         bg-white/5 
         border border-white/[0.08]
         text-white no-underline
@@ -80,8 +80,8 @@ function AppTileCard({
       onMouseLeave={onLeave}
       onTouchStart={onHover}
     >
-      <span className="block text-base font-normal">{tile.title}</span>
-      <span className="block mt-2 text-[0.65rem] tracking-[0.2em] text-vault-muted">
+      <span className="block text-sm md:text-base font-normal">{tile.title}</span>
+      <span className="block mt-1.5 text-[0.6rem] md:text-[0.65rem] tracking-[0.2em] text-vault-muted">
         {tile.category}
       </span>
     </a>
@@ -186,7 +186,7 @@ function Footer() {
   };
 
   return (
-    <footer className="mt-auto mb-9 text-right w-full pr-8">
+    <footer className="mt-auto mb-4 text-right w-full pr-8">
       <div 
         className="text-[1.7rem] tracking-[0.15em] text-vault-red opacity-70 cursor-pointer select-none transition-opacity hover:opacity-100"
         onClick={handleAdminClick}
@@ -225,16 +225,16 @@ export default function Home() {
 
   return (
     <div 
-      className="min-h-screen flex flex-col items-center overflow-x-hidden"
+      className="h-screen flex flex-col items-center overflow-hidden"
       style={{
         background: '#080a0e',
       }}
     >
-      <header className="mt-[30vh] text-center" data-testid="header">
-        <h1 className="text-[2.2rem] tracking-[0.15em] m-0 text-white font-normal">
+      <header className="mt-[12vh] md:mt-[15vh] text-center flex-shrink-0" data-testid="header">
+        <h1 className="text-[1.8rem] md:text-[2.2rem] tracking-[0.15em] m-0 text-white font-normal">
           AIDAN'S VAULT
         </h1>
-        <p className="mt-2.5 text-[0.75rem] tracking-[0.3em] text-vault-muted">
+        <p className="mt-1.5 text-[0.7rem] md:text-[0.75rem] tracking-[0.3em] text-vault-muted">
           EXPERIMENTS · WORLDS · LEVELS
         </p>
       </header>
@@ -242,7 +242,7 @@ export default function Home() {
       <SquidDivider />
 
       <main 
-        className="w-[90%] max-w-[420px] grid grid-cols-1 gap-[18px] z-[2] md:max-w-[720px] md:grid-cols-2"
+        className="w-[90%] max-w-[420px] grid grid-cols-1 gap-3 z-[2] md:max-w-[720px] md:grid-cols-2 md:gap-4 flex-shrink-0"
         data-testid="app-grid"
       >
         {isLoading ? (
