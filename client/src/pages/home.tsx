@@ -3,6 +3,7 @@ import { useLocation } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import type { AppTile } from "@shared/schema";
 import demogorgonImage from "@assets/image_1767654775177.png";
+import fortnitePlaneImage from "@assets/IMG_1894_1767676650912.jpeg";
 
 function SquidDivider() {
   return (
@@ -169,7 +170,7 @@ function SkyBattle() {
 function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
   return (
     <div 
-      className="fixed inset-0 pointer-events-none z-0 flex items-center justify-center overflow-hidden"
+      className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
       data-testid="demogorgon-background"
     >
       <div 
@@ -178,15 +179,37 @@ function DemogorgonBackground({ eyesActive }: { eyesActive: boolean }) {
           background: 'radial-gradient(ellipse at center, rgba(30, 10, 15, 0.4) 0%, transparent 70%)',
         }}
       />
+      
+      <img
+        src={fortnitePlaneImage}
+        alt=""
+        className="absolute object-contain select-none animate-chase-plane"
+        style={{
+          width: '35vw',
+          maxWidth: '280px',
+          left: '5%',
+          top: '35%',
+          opacity: 0.4,
+          filter: 'brightness(0.8) saturate(0.9)',
+          transform: 'scaleX(1) rotate(-5deg)',
+        }}
+      />
+      
       <img
         src={demogorgonImage}
         alt=""
-        className="h-[55vh] max-h-[500px] object-contain opacity-15 select-none"
+        className="absolute object-contain select-none"
         style={{
+          height: '45vh',
+          maxHeight: '400px',
+          right: '8%',
+          top: '30%',
+          opacity: 0.18,
           filter: eyesActive 
             ? 'brightness(1.1) saturate(1.3)' 
             : 'brightness(0.6) saturate(0.5)',
           transition: 'filter 0.5s ease-in-out',
+          transform: 'scaleX(-1)',
         }}
       />
     </div>
